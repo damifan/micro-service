@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lovnx.mapper.InterfaceLimitMapper" >
-  <resultMap id="BaseResultMap" type="com.lovnx.entity.InterfaceLimit" >
+<mapper namespace="com.damifan.mapper.InterfaceLimitMapper" >
+  <resultMap id="BaseResultMap" type="com.damifan.entity.InterfaceLimit" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="interfaceId" property="interfaceId" jdbcType="INTEGER" />
     <result column="unitTime" property="unitTime" jdbcType="INTEGER" />
@@ -68,7 +68,7 @@
   <sql id="Base_Column_List" >
     id, interfaceId, unitTime, unitNum
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lovnx.entity.InterfaceLimitExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.damifan.entity.InterfaceLimitExample" >
     select
     <if test="distinct" >
       distinct
@@ -92,19 +92,19 @@
     delete from interface_limit
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lovnx.entity.InterfaceLimitExample" >
+  <delete id="deleteByExample" parameterType="com.damifan.entity.InterfaceLimitExample" >
     delete from interface_limit
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lovnx.entity.InterfaceLimit" >
+  <insert id="insert" parameterType="com.damifan.entity.InterfaceLimit" >
     insert into interface_limit (id, interfaceId, unitTime, 
       unitNum)
     values (#{id,jdbcType=INTEGER}, #{interfaceId,jdbcType=INTEGER}, #{unitTime,jdbcType=INTEGER}, 
       #{unitNum,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.lovnx.entity.InterfaceLimit" >
+  <insert id="insertSelective" parameterType="com.damifan.entity.InterfaceLimit" >
     insert into interface_limit
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -135,7 +135,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lovnx.entity.InterfaceLimitExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.damifan.entity.InterfaceLimitExample" resultType="java.lang.Integer" >
     select count(*) from interface_limit
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -171,7 +171,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lovnx.entity.InterfaceLimit" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.damifan.entity.InterfaceLimit" >
     update interface_limit
     <set >
       <if test="interfaceId != null" >
@@ -186,7 +186,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lovnx.entity.InterfaceLimit" >
+  <update id="updateByPrimaryKey" parameterType="com.damifan.entity.InterfaceLimit" >
     update interface_limit
     set interfaceId = #{interfaceId,jdbcType=INTEGER},
       unitTime = #{unitTime,jdbcType=INTEGER},
