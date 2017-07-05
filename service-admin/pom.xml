@@ -29,12 +29,12 @@
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server</artifactId>
-			<version>1.4.6</version>
+			<version>1.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server-ui</artifactId>
-			<version>1.4.6</version>
+			<version>1.5.2</version>
 		</dependency>
  		<dependency>
             <groupId>org.jolokia</groupId>
@@ -51,7 +51,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Camden.SR5</version>
+				<version>Dalston.SR1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
