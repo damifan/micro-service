@@ -4,7 +4,9 @@ import com.damifan.entity.InterfaceLimit;
 import com.damifan.entity.InterfaceLimitExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface InterfaceLimitMapper {
     int countByExample(InterfaceLimitExample example);
 

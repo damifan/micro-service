@@ -38,7 +38,7 @@ public class AccessFilter extends ZuulFilter  {
             log.warn("access token is empty");
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
-            return null;
+            return ctx.getResponse();
         }
         log.info("access token ok");
         return null;

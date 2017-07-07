@@ -11,11 +11,11 @@ import com.damifan.service.InterfaceLimitService;
 public class InterfaceLimitServiceImpl implements InterfaceLimitService {
 	
 	@Autowired
-	private InterfaceLimitMapper mapper;
+	private InterfaceLimitMapper interfaceLimitMapper;
 
 	@Override
 	public InterfaceLimit getEntityByPri(Integer id) {
-		return mapper.selectByPrimaryKey(id);
+		return interfaceLimitMapper.selectByPrimaryKey(id);
 	}
 
 }
